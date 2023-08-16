@@ -7,11 +7,11 @@ This repository contains materials for the TELCOM 2310 labs.
 Labs will use the [Fabric testbed](https://portal.fabric-testbed.net/).
 
 To set up your Fabric environment, see the instructions here: [Fabric
-Setup](https://github.com/amybabay/telcom2310/Fabric_Setup.md).
+Setup](https://github.com/amybabay/telcom2310/blob/main/Fabric_Setup.md).
 
 ## Lab Materials
 
-Lab materials are in the [labs](https://github.com/amybabay/telcom2310/labs)
+Lab materials are in the [labs](https://github.com/amybabay/telcom2310/tree/main/labs)
 directory.
 
 Each lab will typically include two Jupyter notebooks, as well as a worksheet
