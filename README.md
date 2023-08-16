@@ -16,8 +16,9 @@ directory.
 
 Each lab will typically include two Jupyter notebooks, as well as a worksheet
 for you to fill out. The two notebooks are:
-    - **CreateSlice.ipynb**: Creates the Fabric slice/topology needed for the lab
-    - **LabName.ipynb**: Performs any additional configuration on slice nodes (uploading files, installing packages, configuring network interfaces) and provides instructions for running the lab
+
+- **CreateSlice.ipynb**: Creates the Fabric slice/topology needed for the lab
+- **LabName.ipynb**: Performs any additional configuration on slice nodes (uploading files, installing packages, configuring network interfaces) and provides instructions for running the lab
 
 ## Acknowledgment and additional resources
 
