@@ -25,10 +25,10 @@ You must have your Fabric account and JupyterHub environment setup. Please see t
     	- Login/connect to the [FABRIC JupyterHub](https://learn.fabric-testbed.net/knowledge-base/creating-your-first-experiment-in-jupyter-hub/)
    - Download the latest copy of the tutorials from GitHub
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
-    	- In the terminal window, type the following command to download (pull) the latest version of the set of tutorials from Github
-```
-        	git clone https://github.com/amybabay/telcom2310.git
-```
+    	- In the terminal window, type the following command to download (pull) the latest version of the set of tutorials from Github:
+            ```
+            git clone https://github.com/amybabay/telcom2310.git
+            ```
 
    - Run the lab notebooks
     	- In the left-hand column of JupyterHub, navigate to the Lab01_Sockets lab
