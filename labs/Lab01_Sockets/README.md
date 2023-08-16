@@ -11,7 +11,7 @@ In this lab, you will:
 
 ## Prerequisites
 
-You must have your Fabric account and JupyterHub environment setup. Please see the [Fabric Setup](https://github.com/amybabay/fabric-labs/blob/main/Fabric_Setup.md) for instructions.
+You must have your Fabric account and JupyterHub environment setup. Please see the [Fabric Setup](https://github.com/amybabay/telcom2310/blob/main/Fabric_Setup.md) for instructions.
 
 ## Running the Lab
 
@@ -27,7 +27,7 @@ You must have your Fabric account and JupyterHub environment setup. Please see t
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
     	- In the terminal window, type the following command to download (pull) the latest version of the set of tutorials from Github
 ```
-        	git clone https://github.com/amybabay/fabric-labs.git
+        	git clone https://github.com/amybabay/telcom2310.git
 ```
 
    - Run the lab notebooks
