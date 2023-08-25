@@ -67,9 +67,9 @@ folder.
 \"Setup Environment\")
 
 4\. Follow the instructions in the notebook, editing the specified
-variables and running each cell to set up your environment. Note: I
-recommend using the \~/work/fabric_config directory to store all your
-keys and your ssh config file.
+variables and running each cell to set up your environment.
+- Note 1: I recommend using the \~/work/fabric_config directory to store all your keys and your ssh config file.
+- Note 2: The final cell "﻿﻿Create a Downloadable Package that Deploys SSH Tunnels" is not needed. You can skip that cell. If you do run it, you will likely get an error `cp: cannot stat ‘fabric_ssh_tunnel_tools.zip’: No such file or directory`. You may safely ignore this error; your environment is already set up.
 
 ## (Optional) Finish Configuring Your Local SSH Environment
 
