@@ -26,24 +26,26 @@ You can do this as follows:
 
 2\. Select the \"Bastion\" tab
 
-3\. Under \"Name\" enter \"bastion_key\" (without quotes)
+3\. Under \"Name\" enter \"bastion_key\" (without quotes).
 
-4\. Click the \"Generate\" button
+4\. Under \"Description\" enter a description of the key's purpose. It is fine to just enter \"bastion_key\" here again.
 
-5\. Download **both** the public and private keys. The private key will
+5\. Click the \"Generate\" button
+
+6\. Download **both** the public and private keys. The private key will
 be named \"bastion_key\", and the corresponding public key will be named
 \"bastion_key.pub\". Be sure to save these somewhere on your computer
 that you will be able to find them again (the .ssh directory is the
 conventional choice, but any location is ok).
 
-6\. Set the file permissions so that the private key is only readable by
+7\. Set the file permissions so that the private key is only readable by
 your user. You can do this with the command:
-`chmod 0600 ~/.ssh/mysshkey` if you saved the key in the .ssh directory.
+`chmod 0600 ~/.ssh/bastion_key` if you saved the key in the .ssh directory and named it \"bastion_key\".
 If you chose another location, adjust the path accordingly (e.g. if you
 saved it in a telcom2310 directory on your Desktop:
-`chmod 0600 ~/Desktop/telcom2310/mysshkey`)
+`chmod 0600 ~/Desktop/telcom2310/bastion_key`)
 
-7\. Repeat the above steps to generate the sliver key. Select the
+8\. Repeat the above steps to generate the sliver key. Select the
 \"Sliver\" tab instead of \"Bastion\" and name the key
 \"fabric_sliver_key\".
 
