@@ -1,70 +1,47 @@
-# Lab 1: Introduction to Client-Server Applications and Wide-Area Networks
+# Lab 2: Reliable Data Transfer
 
 ## Objectives
 
 In this lab, you will:
-    - Review and understand the code for simple client-server applications using TCP and UDP
-    - Run client-server applications over a wide-area network using the Fabric testbed
-    - Examine performance characteristics using an application-level “Ping” test program
-    - Bonus: modify TCP “Ping” program to compare non-persistent vs persistent connections
 
-## Running the Tutorial
+- Review Python code for an implementation of Go-Back-N to perform reliable data transfer on top of UDP
+- Run the Go-Back-N program to transfer a file over a wide-area network using the GENI testbed
+- Experimentally validate the relationship between window size and throughput discussed in lecture
 
-- The tutorial has three Jupyter notebooks and one folder:
+## Prerequisites
+
+You must have your Fabric account and JupyterHub environment setup. Please see
+the [Fabric
+Setup](https://github.com/amybabay/telcom2310/blob/main/Fabric_Setup.md) for
+instructions.
+
+## Running the Lab
+
+- The lab has two Jupyter notebooks and one folder:
     - **CreateSlice.ipynb**: Creates the FABRIC slice/topology needed for this tutorial
-    - **SocketLab.ipynb**: Configures the IPv4/IPv6 network address, downloads the ospf software, and then begins the OSPF tutorial
-    - **Assignment.ipynb**: Contains questions/tasks to be answered
+    - **RDTLab.ipynb**: Gets slice info, uploads test programs to nodes, and contains instructions for running the lab
 
-- To run the tutorial:
+- To run the lab:
    - Login to the FABRIC Portal and JupyterHub
     	- Login to the [FABRIC Portal](https://portal.fabric-testbed.net/)
     	- Login/connect to the [FABRIC JupyterHub](https://learn.fabric-testbed.net/knowledge-base/creating-your-first-experiment-in-jupyter-hub/)
    - Download the latest copy of the tutorials from GitHub
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
-    	- In the terminal window, type the following commands to download (pull) the latest version of the set of tutorials from Github
-```
-        	mkdir fabric-labs
-        	cd fabric-labs
-        	git clone https://github.com/amybabay/fabric-labs.git
-```
+        - If you already have a clone of the telcom2310 repo in your JupyterHub
+          environment:
+            - In the terminal, type the following to update to the latest version:
+            ```
+            cd telcom2310
+            git pull
+            ```
+        - Otherwise:
+            - In the terminal window, type the following command to download
+              (pull) the latest version of the set of tutorials from Github:
+            ```
+            git clone https://github.com/amybabay/telcom2310.git
+            ```
 
-   - Run the Tutorial Notebooks
-    	- In the left-hand column of JupyterHub, navigate to the OSPF tutorial
-    	- Open and execute the CreateSlice.ipynb notebook
-        - Then open and execute the SocketLab.ipynb
-        - Then open and execute the Assignment.ipynb
-
-## Overview of the Notebooks in this Tutorial
-
-### Create Slice Notebook
-- In this notebook you will request a slice that contains four nodes (ND_A, ND_B, ND_C, and, ND_D) and Four Layer-2 networks (LANs) with the following configurations:
-```
-	ND_A <-> lAN 2 <-> ND_B
-	|            	    |
-	lAN 1           	lAN 3
-	|            	    |
-	ND_C <-> lAN 4 <-> ND_D
-
-```
-- Each node should have the following requirements:
-	- NIC_Basic model
-	- "default_ubuntu_20" image
-	- 4 cores
-	- 16 ram
-	- 50 disk space
- - To successfully run this notebook you should only need to run the code blocks in order from top to bottom
- - **Notes:** If your slice creation fails you can just try to specify a site in the second code block run them again. (you can get a site from "https://portal.fabric-testbed.net/" by looking at the map, use the name **outside** of the parenthesis and make sure the site chosen is up)
-
-### OSPF Notebook
-- To successfully run this notebook you need to run the code blocks first (*Setup Experiment*) and then run the experiment (*Run Experiment*):
-	- Setup Experiment: This is the setup, run the provided Codeblocks to setup the network and to provide the correct addresses to each node.
-    - Run Experiment: This is the Experiment, To complete this section just follow the provided instructions to understand the 3 capabilities in this tutorial: Router Interface, Dead Link and Route Change.
- 
-### Assignment Notebook
-- In this Assignment you will attempt to test how this algorithm can be tricked into sending route errors, and experiment with the 'hello' & 'dead' intervals to answer some questions
-- **Notes:** In the case the slice fails to delete please examine the experiment tab on the fabric portal and delete the corresponding slice if it was not already deleted
-
-## Additional Information
-- FABRIC Learn Website: If you encounter problems,questions, or suggestions, please navigate to the FABRIC Knowledge Base at https://learn.fabric-testbed.net/
-- FABRIC Teaching Material Github: <https://github.com/fabric-testbed/teaching-materials>
-- This assignment was originally written for the GENI network (<https://www.cs.unc.edu/Research/geni/geniEdu/06-Ospf.html>), but has been converted to run in FABRIC.
+   - Run the lab notebooks
+    	- In the left-hand column of JupyterHub, navigate to the `Lab02_RDT` lab
+    	- Open and execute the `CreateSlice.ipynb` notebook
+        - Then open and execute the `RDTLab.ipynb`, filling out your `Lab2_Worksheet.docx` document as you go.
