@@ -5,7 +5,7 @@
 In this lab, you will:
 
 - Review Python code for an implementation of Go-Back-N to perform reliable data transfer on top of UDP
-- Run the Go-Back-N program to transfer a file over a wide-area network using the GENI testbed
+- Run the Go-Back-N program to transfer a file over a wide-area network using the Fabric testbed
 - Experimentally validate the relationship between window size and throughput discussed in lecture
 
 ## Prerequisites
