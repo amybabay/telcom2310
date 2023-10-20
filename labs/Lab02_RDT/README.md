@@ -32,6 +32,7 @@ instructions.
             - In the terminal, type the following to update to the latest version:
             ```
             cd telcom2310
+            git fetch
             git pull
             ```
         - Otherwise:
