@@ -27,9 +27,6 @@ VTYSH_CONF="/etc/frr/vtysh.conf"
 VTYSH_TEMP="/tmp/vtysh.conf"
 FRR_CONF="/etc/frr/frr.conf"
 
-# disable Static routes installed by GENI.
-sudo /var/emulab/boot/rc.route disable-routes
-
 # look for the ospfd conf file, and if it is there assume we are rebooting
 # instead of booting the first time, therefore everything is already installed
 # and configured, so skip.
@@ -55,8 +52,8 @@ if [[ ! -f $OSPFD ]]; then
     
     #determine hostname, IP addrs
     HOST=`hostname | awk -F'.' '{print $1}'`
-    ETH1IP=`ip addr | grep inet | grep ens7 | awk -F " " '{print $2}'`
-    ETH2IP=`ip addr | grep inet | grep ens8 | awk -F " " '{print $2}'`
+    ETH1IP=`ip addr | grep inet | grep enp7s0 | awk -F " " '{print $2}'`
+    ETH2IP=`ip addr | grep inet | grep enp8s0 | awk -F " " '{print $2}'`
     NET1=`echo $ETH1IP | sed -e 's/.\//0\//g'`
     NET2=`echo $ETH2IP | sed -e 's/.\//0\//g'`
     if [[ ${ETH1IP: -4: -3} == "1" ]]; then
@@ -73,13 +70,13 @@ if [[ ! -f $OSPFD ]]; then
     sudo echo " ip address 127.0.0.1/8" >> $ZEBRA_TEMP
     sudo echo " ip forwarding" >> $ZEBRA_TEMP
     sudo echo "!" >> $ZEBRA_TEMP
-    sudo echo "interface ens7" >> $ZEBRA_TEMP
-    sudo echo " description ens7" >> $ZEBRA_TEMP
+    sudo echo "interface enp7s0" >> $ZEBRA_TEMP
+    sudo echo " description enp7s0" >> $ZEBRA_TEMP
     sudo echo " ip address $ETH1IP" >> $ZEBRA_TEMP
     sudo echo " ip forwarding" >> $ZEBRA_TEMP
     sudo echo "!" >> $ZEBRA_TEMP
-    sudo echo "interface ens8" >> $ZEBRA_TEMP
-    sudo echo " description ens8" >> $ZEBRA_TEMP
+    sudo echo "interface enp8s0" >> $ZEBRA_TEMP
+    sudo echo " description enp8s0" >> $ZEBRA_TEMP
     sudo echo " ip address $ETH2IP" >> $ZEBRA_TEMP
     sudo echo " ip forwarding" >> $ZEBRA_TEMP
     sudo echo "log file /var/log/frr/zebra.log" >> $ZEBRA_TEMP
@@ -91,8 +88,8 @@ if [[ ! -f $OSPFD ]]; then
     # Write OSPFD config file
     sudo echo "! OSPFD configuration file" >> $OSPFD_TEMP
     sudo echo "hostname $HOST" >> $OSPFD_TEMP
-    sudo echo "interface ens7" >> $OSPFD_TEMP
-    sudo echo "interface ens8" >> $OSPFD_TEMP
+    sudo echo "interface enp7s0" >> $OSPFD_TEMP
+    sudo echo "interface enp8s0" >> $OSPFD_TEMP
     sudo echo "router ospf" >> $OSPFD_TEMP
     sudo echo " ospf router-id $ROUTER_ID" >> $OSPFD_TEMP
     sudo echo " network $NET1 area 0" >> $OSPFD_TEMP
