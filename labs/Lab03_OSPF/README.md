@@ -48,11 +48,11 @@ instructions.
 ### Create Slice Notebook
 - In this notebook you will request a slice that contains four nodes (ND_A, ND_B, ND_C, and, ND_D) and Four Layer-2 networks (LANs) with the following configurations:
 ```
-	ND_A <-> lAN 2 <-> ND_B
+	ND_A <-> LAN 4 <-> ND_D
 	|            	    |
-	lAN 1           	lAN 3
+	LAN 1           	LAN 3
 	|            	    |
-	ND_C <-> lAN 4 <-> ND_D
+	ND_B <-> LAN 2 <-> ND_C
 
 ```
 
