@@ -34,12 +34,13 @@ if [[ ! -f $OSPFD ]]; then
     ########## INSTALL FRR (see: https://deb.frrouting.org/) ##########
 
     # add GPG key
-    curl -s https://deb-us.frrouting.org/frr/keys.asc | sudo apt-key add -
+    curl -s https://deb.frrouting.org/frr/keys.gpg | sudo tee /usr/share/keyrings/frrouting.gpg > /dev/null
 
-    # possible values for FRRVER: frr-6 frr-7 frr-stable
+    # possible values for FRRVER: frr-6 frr-7 frr-8 frr-9 frr-stable
     # frr-stable will be the latest official stable release
     FRRVER="frr-stable"
-    echo deb https://deb-us.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+    echo deb '[signed-by=/usr/share/keyrings/frrouting.gpg]' https://deb.frrouting.org/frr \
+     $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
 
     # update and install FRR
     sudo apt update && sudo apt -y install frr frr-pythontools traceroute
