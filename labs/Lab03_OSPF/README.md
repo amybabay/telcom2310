@@ -55,6 +55,11 @@ instructions.
 	ND_C <-> lAN 4 <-> ND_D
 
 ```
+
+IP addresses are assigned to the nodes as follows:
+
+![router_setup](./router_setup.png)
+
 - Each node should have the following requirements:
 	- NIC_Basic model
 	- "default_ubuntu_20" image
@@ -67,12 +72,8 @@ instructions.
 ### OSPF Notebook
 - To successfully run this notebook you need to run the code blocks first (*Setup Experiment*) and then run the experiment (*Run Experiment*):
 	- Setup Experiment: This is the setup, run the provided Codeblocks to setup the network and to provide the correct addresses to each node.
-    - Run Experiment: This is the Experiment, To complete this section just follow the provided instructions to understand the 3 capabilities in this tutorial: Router Interface, Dead Link and Route Change.
+    - Run Experiment: This is the Experiment, To complete this section just follow the provided instructions to understand the capabilities in this tutorial: Router Interface, Dead Link and Route Change, and Link Costs. You will fill out your Lab03_Worksheet.docx as you work through this notebook.
  
-### Assignment Notebook
-- In this Assignment you will attempt to test how this algorithm can be tricked into sending route errors, and experiment with the 'hello' & 'dead' intervals to answer some questions
-- **Notes:** In the case the slice fails to delete please examine the experiment tab on the fabric portal and delete the corresponding slice if it was not already deleted
-
 ## Additional Information
 - FABRIC Learn Website: If you encounter problems,questions, or suggestions, please navigate to the FABRIC Knowledge Base at https://learn.fabric-testbed.net/
 - FABRIC Teaching Material Github: <https://github.com/fabric-testbed/teaching-materials>
