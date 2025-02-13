@@ -1,5 +1,14 @@
 # Lab 1: Introduction to Client-Server Applications and Wide-Area Networks
 
+## Notes
+
+A couple things changed since the labs were last tested. In the Jupyter
+notebooks, replace: `ens7` with `enp7s0` (I have also seen some VMs using
+`enp6s0`).
+
+Replace `~/work/fabric_config/fabric_sliver_key` with
+`~/work/fabric_config/slice_key`.
+
 ## Objectives
 
 In this lab, you will:
