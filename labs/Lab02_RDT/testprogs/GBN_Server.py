@@ -54,7 +54,7 @@ def main(argv):
                     bytes_recvd += len(data)
 
                     # Periodic reporting
-                    if pkt_header.seq_num % 1000 == 0:
+                    if pkt_header.seq_num > 0 and pkt_header.seq_num % 100 == 0:
                         cur_time = time.time()
                         elapsed_time = cur_time - start_time
                         throughput = (bytes_recvd * 8) / (elapsed_time) / 1000000
