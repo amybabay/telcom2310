@@ -67,7 +67,7 @@ IP addresses are assigned to the nodes as follows:
 	- 4 ram
 	- 10 disk space
  - To successfully run this notebook you should only need to run the code blocks in order from top to bottom
- - **Notes:** If your slice creation fails you can just try to specify a site in the second code block run them again. (you can get a site from "https://portal.fabric-testbed.net/" by looking at the map, use the name **outside** of the parenthesis and make sure the site chosen is up)
+ - **Notes:** If your slice creation fails you can try to specify a different site in the second code block run them again. (you can get a site from "https://portal.fabric-testbed.net/" by looking at the map, use the name **outside** of the parenthesis and make sure the site chosen is up)
 
 ### OSPF Notebook
 - To successfully run this notebook you need to run the code blocks first (*Setup Experiment*) and then run the experiment (*Run Experiment*):
