@@ -18,9 +18,8 @@ instructions.
     - **OSPF.ipynb**: Configures the IPv4/IPv6 network address, downloads the OSPF software, and contains instructions for running the lab 
 
 - To run the lab:
-   - Login to the FABRIC Portal and JupyterHub
-    	- Login to the [FABRIC Portal](https://portal.fabric-testbed.net/)
-    	- Login/connect to the [FABRIC JupyterHub](https://learn.fabric-testbed.net/knowledge-base/creating-your-first-experiment-in-jupyter-hub/)
+   - Login to the [FABRIC JupyterHub](https://jupyter.fabric-testbed.net/)
+        - Use "University of Pittsburgh" as your identity provider
    - Download the latest copy of the tutorials from GitHub
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
         - If you already have a clone of the telcom2310 repo in your JupyterHub
